@@ -2,6 +2,12 @@
 The purpose of this project is to evaluate the practicality of the concept presented in the paper that has been submitted to the Journal of Expert Systems With Applications. We appreciate your contribution to this field and look forward to exploring this idea further. The project aims to represent the chessboard as a graph and split it into a network of nodes. The maximum cliques computed from this representation could potentially provide a solution to the n-queen problem. This approach considers multiple perspectives and could be worth exploring further.
 The paper's main idea is based on the notion of configuration. There are two types of configurations: enabled configurations, which can be split, and terminal configurations, which cannot. The presented distributed algorithm is based on refinement. The refinement method in our distribution strategy involves breaking down a configuration into smaller ones, which are then further decomposed until reaching a stage where a solution is found, and we can no longer decompose any further.
 
+![partition 3](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/79b3307f-aab3-4384-b39d-267654dcd208)
+![partition 2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/71fd573e-85a3-4771-bb92-2f8ab7188764)
+![partition 1](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/0c9be3a9-6903-4d93-9f79-e9d8899f0ac4)
+![partition 0](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/7222df72-ab29-415d-a848-4031262b3307)
+
+
 
 Download and install the Erlang programming language 
 
@@ -13,61 +19,60 @@ It could be assumed that the working directory is located at E:/work.
 Open the Erlang shell and enter the following command:
 
 
-cd("e:/work").
+**cd("e:/work").**
 
 
 Let's say we want to solve the 4-queen problem. type in Erlang shell
 
 
-c(codinglist).
+**c(codinglist).**
 
 
-Refvec=codinglist:coding_list(4).
+**Refvec=codinglist:coding_list(4).**
 
 
- c(library).
+ **c(library).**
 
  
- S0=library:getInitialConf(Refvec).
+ **S0=library:getInitialConf(Refvec).**
 
  
 you got 
 
 
-<<0,0,255,255>>
+**<<0,0,255,255>>**
 
 
 To see a configuration as described in the paper type :
 
 
-library: split_Conf(S0,Refvec)
+**library: split_Conf(S0,Refvec)**
 
 
 you got :
 
 
-{0,65535}
+**{0,65535}**
 
 
 if you want to see a configuration as list type :
 
 
-library: displayOfConf(S0,Refvec).
+**library: displayOfConf(S0,Refvec).**
 
 
 you got :
 
 
 {[],
- [34856,33300,135300,131361,10308,1048,1153,132162,17444,
-  20552,8328,16658,67714,8209,66113,8738]}
+ [34856,33300,135300,131361,10308,1048,1153,132162,17444, 20552,8328,16658,67714,8209,66113,8738]}
 
   
 
 for choosing an element for refinement type :
 
 
-library:choose(0,65535,Refvec).
+**library:choose(0,65535,Refvec).**
 
 
 you got :
@@ -80,49 +85,49 @@ we draw attention, that 0 represents the first component of configuration and 65
 To split a configuration into two configuration types:
 
 
-{S1,S2}=library:split(S0, Refvec).
+**{S1,S2}=library:split(S0, Refvec).**
 
 
 you got :
 
 
-{<<32,0,40,93>>,<<32,0,223,255>>}
+**{<<32,0,40,93>>,<<32,0,223,255>>}**
 
 
 To know the own of a configuration you need to hash the second part of this configuration as fellow:
 
 
-c(testhash).
+**c(testhash).**
 
 
 if we assume that the number of workstations is 3 :
 
 
-I0=testhash:h(S0,3,Refvec).
+**I0=testhash:h(S0,3,Refvec).**
 
 
 you got :
 
 
-1
+**1**
 
 
-I1=testhash:h(S1,3,Refvec).
+**I1=testhash:h(S1,3,Refvec).**
 
 
 you got:
 
 
-1
+**1**
 
 
-I2=testhash:h(S2,3,Refvec).
+**I2=testhash:h(S2,3,Refvec).**
 
 
 you got :
 
 
-0
+**0**
 
 
 That's enough for configuration; now let's move to the sequential program.
@@ -130,50 +135,50 @@ type in the Erlang shell :
 
 
 
-c(seqalgo).
+**c(seqalgo).**
 
 
 
-Refvec=codinglist:coding_list(4).
+**Refvec=codinglist:coding_list(4).**
 
 
-S0=library:getInitialConf(Refvec).
+**S0=library:getInitialConf(Refvec).**
 
 
 Go to the code of the library  delete exactly "io:format("e=~w~n",[E])," from the split function save and compile library as follow:
 
 
-c(library).
+**c(library).**
 
 
 type the command :
 
 
-A4=seqalgo:generate(Refvec,[S0],[]).
+**A4=seqalgo:generate(Refvec,[S0],[]).**
 
 
 you got :
 
 
-[<<97,130,65,130>>,<<40,20,40,20>>]
+**[<<97,130,65,130>>,<<40,20,40,20>>]**
 
 
 To count the number of solution types:
 
 
-length(A4).
+**length(A4).**
 
 
 you got :
 
 
-2
+**2**
 
 
 To display a solution on the chessboard type :
 
 
-library:displayOnChess(<<97,130,65,130>>,Refvec).
+**library:displayOnChess(<<97,130,65,130>>,Refvec).**
 
 ![cliqueof4solution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/0469b460-b5d4-49c7-8969-33a7acf37708)
 
@@ -182,34 +187,34 @@ library:displayOnChess(<<97,130,65,130>>,Refvec).
 you got :
 
 
-[8,1,14,7]
+**[8,1,14,7]**
 
 
 To test the solution for  different chessboards for example 8-queen type:
 
 
-Refvec8=codinglist:coding_list(8).
+**Refvec8=codinglist:coding_list(8).**
 
 
-S8=library:getInitialConf(Refvec8).
+**S8=library:getInitialConf(Refvec8).**
 
 
-A8=seqalgo:generate(Refvec8,[S8],[])
+**A8=seqalgo:generate(Refvec8,[S8],[])**
 
 
-length(A8).
+**length(A8).**
 
 
 you got :
 
 
-92
+**92**
 
 
 To test the running in microsecond  time just type :
 
 
-timer:tc(seqalgo,generate,[Refvec8,[S8],[]]).
+**timer:tc(seqalgo,generate,[Refvec8,[S8],[]]).**
 
 
  for example, it depends on the computer you have:
@@ -243,16 +248,16 @@ for example, for the 7-queens we have :
 
 
 
-Refvec7=codinglist:coding_list(7).
+**Refvec7=codinglist:coding_list(7).**
 
 
-S7= library:getInitialConf(Refvec7). 
+**S7= library:getInitialConf(Refvec7).** 
 
 
-A7 = testhash:allConfiguration(Refvec7,[S7],[]).
+**A7 = testhash:allConfiguration(Refvec7,[S7],[]).**
 
 
-Totalconf7=length(A7).
+**Totalconf7=length(A7).**
 
 
 you got :
@@ -264,7 +269,7 @@ you got :
 if we assume that we have 10 machine type:
 
 
- N7= testhash:numOfConfByMachines(10,Refvec7,A7). 
+** N7= testhash:numOfConfByMachines(10,Refvec7,A7).** 
 
  
  you got :
