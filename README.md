@@ -176,7 +176,7 @@ you got :
 [8,1,14,7]
 
 
-To test the solution different chessboards for example 8-queen type:
+To test the solution for  different chessboards for example 8-queen type:
 
 
 Refvec8=codinglist:coding_list(8).
