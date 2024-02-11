@@ -175,6 +175,9 @@ To display a solution on the chessboard type :
 
 library:displayOnChess(<<97,130,65,130>>,Refvec).
 
+![cliqueof4solution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/0469b460-b5d4-49c7-8969-33a7acf37708)
+
+
 
 you got :
 
@@ -271,6 +274,11 @@ if we assume that we have 10 machine type:
 
 
 This is the distribution for the configurations over machines.
+
+
+![7-queenshisto](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/5ff7db7d-0ca6-4e8f-b1dc-e59c08340780)
+
+
 
 
 Now you need to install anaconda3 which has Jupiter for Python language to draw the graphs on the paper.
