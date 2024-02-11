@@ -1,6 +1,12 @@
 # Distributed-N-Queen
 The purpose of this project is to evaluate the practicality of the concept presented in the paper that has been submitted to the Journal of Expert Systems With Applications. We appreciate your contribution to this field and look forward to exploring this idea further. The project aims to represent the chessboard as a graph and split it into a network of nodes. The maximum cliques computed from this representation could potentially provide a solution to the n-queen problem. This approach considers multiple perspectives and could be worth exploring further.
 The paper's main idea is based on the notion of configuration. There are two types of configurations: enabled configurations, which can be split, and terminal configurations, which cannot. The presented distributed algorithm is based on refinement. The refinement method in our distribution strategy involves breaking down a configuration into smaller ones, which are then further decomposed until reaching a stage where a solution is found, and we can no longer decompose any further.
+
+
+Download and install the Erlang programming language 
+
+
+
 It could be assumed that the working directory is located at E:/work.
 
 
