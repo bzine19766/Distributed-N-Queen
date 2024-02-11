@@ -2,10 +2,38 @@
 The purpose of this project is to evaluate the practicality of the concept presented in the paper that has been submitted to the Journal of Expert Systems With Applications. We appreciate your contribution to this field and look forward to exploring this idea further. The project aims to represent the chessboard as a graph and split it into a network of nodes. The maximum cliques computed from this representation could potentially provide a solution to the n-queen problem. This approach considers multiple perspectives and could be worth exploring further.
 The paper's main idea is based on the notion of configuration. There are two types of configurations: enabled configurations, which can be split, and terminal configurations, which cannot. The presented distributed algorithm is based on refinement. The refinement method in our distribution strategy involves breaking down a configuration into smaller ones, which are then further decomposed until reaching a stage where a solution is found, and we can no longer decompose any further.
 
-![partition 3](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/79b3307f-aab3-4384-b39d-267654dcd208)
-![partition 2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/71fd573e-85a3-4771-bb92-2f8ab7188764)
-![partition 1](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/0c9be3a9-6903-4d93-9f79-e9d8899f0ac4)
-![partition 0](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/7222df72-ab29-415d-a848-4031262b3307)
+let us assume that we have 3 workstation at the initial state we will have :
+
+![partition 0](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/edf9c424-6474-47cb-938e-32b170c5d752)
+
+after that, the configuration s0 will be split into two configurations s1 and s2 and each configuration will be sent to the right machine based on hashing function h 
+
+![partition 1](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/731842b6-ba87-4863-9024-f8a4ce7121b8)
+
+
+
+in this situation, we will have two workstations calculating in parallel 
+
+![partition 1](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/054f6deb-ad70-4aac-901a-8a4bf49b101d)
+
+
+after that s1 will be divided into s3 and s4 like this 
+
+![partition 2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/e263b716-f865-48eb-be7d-942478a2d8f7)
+
+
+after that, we will have s2 split into s5 and s6 like this where will have three workstations working in parallel and the process continue until finding a solution.
+
+
+![partition 3](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/ab5e497b-1b12-46c8-bdbf-87b7b894cf01)
+
+
+
+
+
+
+
+
 
 
 
