@@ -281,7 +281,7 @@ This is the distribution for the configurations over machines.
 
 
 
-Now you need to install anaconda3 which has Jupiter for Python language to draw the graphs on the paper.
+Now you need to install anaconda3 which has Jupiter for Python language to draw the graphs above.
 
 
 
