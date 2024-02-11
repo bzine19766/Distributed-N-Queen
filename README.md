@@ -134,7 +134,7 @@ Refvec=codinglist:coding_list(4).
 S0=library:getInitialConf(Refvec).
 
 
-go to the code of the library  delete exactly "io:format("e=~w~n",[E])," save and compile library as follow:
+Go to the code of the library  delete exactly "io:format("e=~w~n",[E])," from the split function save and compile library as follow:
 
 
 c(library).
@@ -218,7 +218,7 @@ timer:tc(seqalgo,generate,[Refvec8,[S8],[]]).
 
 
 7721992 is the time in microseconds dividing this time 1000000 you get the time in seconds
-is around 8 seconds as described in the paper in the graph of timing.
+is around 8 seconds as described in the paper in the graph of timing. We would like to point out that the current method for estimating runtime is incorrect. For instance, in the case of the 4-queen problem, the reported runtime of 0 seconds is inaccurate. Therefore, in order to estimate the runtime accurately, we should calculate the mean of multiple runtimes, up to 100 runs, resulting in an average of 4 milliseconds.
 
 
 
