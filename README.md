@@ -259,7 +259,7 @@ To test the running in microsecond  time just type :
 
 
 
-7721992 is the time in microseconds dividing this time 1000000 you get the time in seconds
+7721992 is the time in microseconds dividing this time by 1000000 you get the time in seconds
 is around 8 seconds as described in the paper in the graph of timing. We would like to point out that the current method for estimating runtime is incorrect. For instance, in the case of the 4-queen problem, the reported runtime of 0 seconds is inaccurate. Therefore, in order to estimate the runtime accurately, we should calculate the mean of multiple runtimes, up to 100 runs, resulting in an average of 4 milliseconds.
 
 
