@@ -266,6 +266,8 @@ is around 8 seconds as described in the paper in the graph of timing. We would l
 
 That's enough for the sequential algorithm based on the notion of configuration. We move on to the load balancing and test the performance of the hashing function.
 
+# Load Balancing 
+
 
 
 We would like to point out that the concept of configuration in its basic form is similar to a Marking in Petri Nets, so at this time, we do not require a distributed algorithm to test the performance of the hash function. We can test it locally as follows:
