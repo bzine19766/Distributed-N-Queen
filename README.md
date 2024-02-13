@@ -372,6 +372,7 @@ we end up with :
 ![kneser5](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/dda32064-10cf-4041-b8de-6fa81fcde8ac)
 
 
+![Kneser 6](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/1524efbf-99fe-4f50-81c0-bbe53c12f925)
 
 
 
