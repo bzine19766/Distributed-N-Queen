@@ -379,7 +379,13 @@ we end up with :
 
 
 So the code in the NoteBook Jupyter Z3 just translates the Graph of the n-queen to a 2-SAT problem and solves it as we have
- seen in the precedent example. The Jupyter NoteBook nqueenESW  translates the chessboard to a graph we call the n-queen graph. when we pass this graph to Z3 Jupyter NoteBook we find the Kneser representation. we draw attention to that for all queens we have m=n except for the 4 queens the solver gave us UNSAT. to solve this problem we set m=n+1. after finding the Kneser representation we can add it to codinglist in the Erlang code. The Jupyter NoteBook isomorphismeESW is used to check that the Kneser representation is isomorphic to the n-queen graph. so we transform the Kneser representation to a Graph and then check the isomorphism with the n-queen graph 
+ seen in the precedent example. The Jupyter NoteBook nqueenESW  translates the chessboard to a graph we call the n-queen graph. when we pass this graph to Z3 Jupyter NoteBook we find the Kneser representation. we draw attention to that for all queens we have m=n except for the 4 queens the solver gave us UNSAT. to solve this problem we set m=n+1. after finding the Kneser representation we can add it to codinglist in the Erlang code. The Jupyter NoteBook isomorphismeESW is used to check that the Kneser representation is isomorphic to the n-queen graph. so we transform the Kneser representation to a Graph and then check the isomorphism with the n-queen graph.
+
+ in line 23 of the Jupyter NoteBook isomorphismeESW just copy past the Kneser representation as follows 
+
+ system = [1469,510,64511,4172,16817,8880,16960, 55808 ,10241,16962,11776,2112,53249,40962,51200,48128]
+
+ To check that this Kneser representation is not isomorphic to the 4-queen graph for that reason we have changed it in the revised version of the paper.
   
 
 
