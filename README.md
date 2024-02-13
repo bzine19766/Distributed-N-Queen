@@ -360,6 +360,9 @@ so we have :
 
 ![Kneser2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/70320fe3-bd53-49fd-b7a7-7c6cfa89f4a0)
 
+![kneser3](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/8104a43e-43b5-4d6f-9a06-14d55d899690)
+
+
 
 
 
