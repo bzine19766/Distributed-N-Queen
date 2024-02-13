@@ -378,8 +378,8 @@ we end up with :
 ![Kneser 7](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/b17db828-0641-4b52-8898-9872c2dc82a7)
 
 
-
-
+So the code in the NoteBook Jupyter Z3 just translates the Graph of the n-queen to a 2-SAT problem and solves it as we have
+ seen in the precedent example. The Jupyter NoteBook nqueenESW  translates the chessboard to a graph we call the n-queen graph. when we pass this graph to Z3 Jupyter NoteBook we find the Kneser representation. we draw attention to that for all queens we have m=n except for the 4 queens the solver gave us UNSAT. to solve this problem we set m=n+1. after finding the Kneser representation we can add it to codinglist in the Erlang code. The Jupyter NoteBook isomorphismeESW is used to check that the Kneser representation is isomorphic to the n-queen graph. so we transform the Kneser representation to a Graph and then check the isomorphism with the n-queen graph 
   
 
 
