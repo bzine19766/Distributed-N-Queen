@@ -352,9 +352,14 @@ For the sake of simplicity, we will do this exercise. See if you can find the Kn
 
 ![Graph](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/4567690e-9a5b-4348-b061-7d1afed69895)
 
-so we have :
+because we have 4-vertices in the graph our encoding may be on 4 bits as follows:
 
 ![Kneser1](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/77bc6835-7ca8-4006-afca-17d3a99229be)
+
+so we have :
+
+![Kneser2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/70320fe3-bd53-49fd-b7a7-7c6cfa89f4a0)
+
 
 
 
