@@ -297,7 +297,7 @@ you got :
 if we assume that we have 10 machine type:
 
 
-** N7= testhash:numOfConfByMachines(10,Refvec7,A7).** 
+ **N7= testhash:numOfConfByMachines(10,Refvec7,A7).** 
 
  
  you got :
@@ -317,7 +317,7 @@ This is the distribution for the configurations over machines.
 Now you need to install anaconda3 which has Jupiter for Python language to draw the graphs above.
 Take a look at The Jupyter notebook ExpertSystem.ipynb.
 
-
+**Distributor:**
 For the algorithm distributor, we are currently in the debugging stage of the distributed termination detection. The current form of the distributor is only for testing purposes. We have the 'generate(I)' function which runs sequentially for each machine, alternating between them. This is for testing the termination detection, which currently only works for N=4 and M=3. Here, N represents the number of queens and M represents the number of machines. Once we fix the bugs in the distributed termination detection, we will move to the true parallel version of the distributor. To test this version, simply type  into the shell:
 
 
