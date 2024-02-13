@@ -339,7 +339,7 @@ As shown in the picture above, the number of messages sent is equal to 28 and th
 
 
 
-
+Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is due to the fact that we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm.
 
 
 
