@@ -318,6 +318,27 @@ Now you need to install anaconda3 which has Jupiter for Python language to draw 
 Take a look at The Jupyter notebook ExpertSystem.ipynb.
 
 
+For the algorithm distributor, we are currently in the debugging stage of the distributed termination detection. The current form of the distributor is only for testing purposes. We have the 'generate(I)' function which runs sequentially for each machine, alternating between them. This is for testing the termination detection, which currently only works for N=4 and M=3. Here, N represents the number of queens and M represents the number of machines. Once we fix the bugs in the distributed termination detection, we will move to the true parallel version of the distributor. To test this version, simply type  into the shell:
+
+
+
+c(distributor).
+
+
+distributor:startAll().
+
+
+distributor:generate(1).
+
+
+you got :
+
+![execution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/49da70f0-3e57-45b8-a017-fbeaf73354d4)
+
+As shown in the picture above, the number of messages sent is equal to 28 and the number of messages received is also 28. Therefore, we are in the state of distributed Termination Detection. The algorithm prints the total solution, which is equal to 2. Machine number 1 owns one terminal configuration representing one solution, and machine 2 owns the other terminal configuration. It should be noted that the algorithm is currently stuck when N is not equal to 4 and M is not equal to 3. We will address this issue shortly.
+
+
+
 
 
 
