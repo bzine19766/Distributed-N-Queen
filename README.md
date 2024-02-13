@@ -34,6 +34,8 @@ after that, we will have s2 split into s5 and s6 like this where will have three
 
 
 
+# Notion Of Configuration
+
 
 
 
