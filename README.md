@@ -345,8 +345,9 @@ As shown in the picture above, the number of messages sent is equal to 28 and th
 
 
 
-Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm. for example, the 8-queen takes more than one hour because generate(I) works sequentially .
-![execution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/94b2d1ac-6754-46e4-9814-1914cf241336)
+Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm. for example, the 8-queen takes more than one hour because generate(I) works sequentially.
+![8-queentest](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/80ba6ea2-0d40-4f1f-9bdd-e0024020928d)
+
 
 
 # Kneser Representation
