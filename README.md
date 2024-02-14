@@ -334,12 +334,13 @@ c(distributor).
 distributor:startAll().
 
 
-distributor:generate(1).
+distributor:generateAll().
 
 
 you got :
 
-![execution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/49da70f0-3e57-45b8-a017-fbeaf73354d4)
+![4-queen](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/30bc73ab-e363-4f96-8d58-d95a32d20b7c)
+
 
 As shown in the picture above, the number of messages sent is equal to 28 and the number of messages received is also 28. Therefore, we are in the state of distributed Termination Detection. The algorithm prints the total solution, which is equal to 2. Machine number 1 owns one terminal configuration representing one solution, and machine 2 owns the other terminal configuration. It should be noted that the algorithm is currently working fine.
 
