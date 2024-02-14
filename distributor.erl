@@ -4,7 +4,7 @@
 -import(codinglist,[coding_list/1]).
 -import(library,[split/2,is_Terminal/2,getInitialConf/1,displayOfConf/2,countSetBits/1,second/2]).
 -import(testhash,[h/3,allConfiguration/3,maph/3,numOfConfByMachines/3]).
--define(N,5).
+-define(N,4).
 -define(M,10).
 
 workstation()-> [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9].
@@ -33,6 +33,14 @@ start(I)-> Refvec=refvec(),S0= getInitialConf(Refvec), I0=h(S0,?M,Refvec),
 startAll()-> startAl(?M).
 startAl(0)-> true;
 startAl(M) -> start(M-1),startAl(M-1).
+
+gen(I)-> Pid = spawn(distributor, generate, [I]),Pid.
+
+generateAll() -> generateAl(?M).
+generateAl(0)->  true;
+generateAl(M)-> gen(M-1),generateAl(M-1).
+
+
 stopAll()-> stopAl(?M).
 stopAl(0)->true;
 stopAl(M)-> sendStop(M-1),stopAl(M-1).
@@ -52,12 +60,12 @@ sendStop(I)  -> procName(I) ! stop.
 generate(I)-> W=procName(I),
              W!{self(),terminatedi},
   receive 
-
-        {W,response,Reply}-> io:format("message=~w~n",[Reply]);
+         
+        
         {W,{I,Initiator,Terminit,Terminatedi, Len,Nbrecdi,Nbsenti,S,T}} -> if 
                                  ((not (Terminatedi)) and (Len /= 0))-> io:format("length=~w S=~w T=~w ~n Nbrec=~w Nbsent=~w ~n",[Len,S,T,Nbrecdi,Nbsenti]),W !{self(),gen},generate(I);
-                                  ((not (Terminatedi)) and (Len == 0))-> W !{self(),gen},io:format("I=~w Initiator=~w Terminit=~w length =~w S=~w T=~w Nbrec=~w Nbsent=~w ~n",[I,Initiator,Terminit,Len,S,T,Nbrecdi,Nbsenti]),J=(I+1) rem ?M, generate(J) ;
-                                   ((Terminatedi)and(Len == 0))->io:format("Distributed Termination Detection~n",[]) ,stopAll() 
+                                  ((not (Terminatedi)) and (Len == 0))-> W !{self(),gen},io:format("I=~w Initiator=~w Terminit=~w length =~w S=~w T=~w Nbrec=~w Nbsent=~w ~n",[I,Initiator,Terminit,Len,S,T,Nbrecdi,Nbsenti]), generate(I) ;
+                                   ((Terminatedi)and(Len == 0))->io:format("Distributed Termination Detection~n",[]) ,sendStop(I) 
                                end
        
         
@@ -156,7 +164,7 @@ onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T) ->
                                                                                      Nsol= length(T), 
                                                                                      Total= Nsol+K,
                                                                                      sendTerm(J,Total),
-                                                                                     onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T);
+                                                                                     onReceive(I,Initiator,Terminit,true,Nbrecdi,Nbsenti,S,T);
                                                                  Initiator -> io:format(" Total Solution=~w~n",[K]), onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T)
                                                              end;
                            
