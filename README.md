@@ -346,7 +346,8 @@ you got :
 
 
 
-Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm. for example, the 8-queen takes around 12 minutes on one machine.
+Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm. for example, the 8-queen takes around 12 minutes on one machine. an important reason for that is the side effect statement io:format
+when we delete the io:format statements the program is stuck we will fix it soon.
 
 
 ![8-queentest](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/51b90f1a-7799-42b9-977a-845ffb9deae5)
