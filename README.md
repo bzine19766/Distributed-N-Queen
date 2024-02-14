@@ -324,7 +324,7 @@ Take a look at The Jupyter notebook ExpertSystem.ipynb.
  # Distributor:
 
 
-For the algorithm distributor, we are currently in the debugging stage of the distributed termination detection. The current form of the distributor is only for testing purposes. We have the 'generate(I)' function which runs sequentially for each machine, alternating between them. This is for testing the termination detection, which currently only works for N=4 and M=3. Here, N represents the number of queens and M represents the number of machines. Once we fix the bugs in the distributed termination detection, we will move to the true parallel version of the distributor. To test this version, simply type  into the shell:
+For the algorithm distributor, we are currently in the debugging stage of the distributed termination detection. The current form of the distributor is only for testing purposes. We have the 'generate(I)' function which runs sequentially for each machine, alternating between them. This is for testing the termination detection, now we have fixed the bugs of termination detection it works for any N and any M. Here, N represents the number of queens and M represents the number of machines. Now, we will move to the true parallel version of the distributor. To test this version, simply type  into the shell:
 
 
 
@@ -341,11 +341,13 @@ you got :
 
 ![execution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/49da70f0-3e57-45b8-a017-fbeaf73354d4)
 
-As shown in the picture above, the number of messages sent is equal to 28 and the number of messages received is also 28. Therefore, we are in the state of distributed Termination Detection. The algorithm prints the total solution, which is equal to 2. Machine number 1 owns one terminal configuration representing one solution, and machine 2 owns the other terminal configuration. It should be noted that the algorithm is currently stuck when N is not equal to 4 and M is not equal to 3. We will address this issue shortly.
+As shown in the picture above, the number of messages sent is equal to 28 and the number of messages received is also 28. Therefore, we are in the state of distributed Termination Detection. The algorithm prints the total solution, which is equal to 2. Machine number 1 owns one terminal configuration representing one solution, and machine 2 owns the other terminal configuration. It should be noted that the algorithm is currently working fine.
 
 
 
-Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm.
+Additionally, it should be noted that the running time of the distributor is currently longer than that of the sequential algorithm. This is because we are currently only testing the distributed termination detection and have not yet fully parallelized our algorithm. for example, the 8-queen takes more than one hour because generate(I) works sequentially .
+![execution](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/94b2d1ac-6754-46e4-9814-1914cf241336)
+
 
 # Kneser Representation
 
