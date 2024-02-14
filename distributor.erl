@@ -4,8 +4,8 @@
 -import(codinglist,[coding_list/1]).
 -import(library,[split/2,is_Terminal/2,getInitialConf/1,displayOfConf/2,countSetBits/1,second/2]).
 -import(testhash,[h/3,allConfiguration/3,maph/3,numOfConfByMachines/3]).
--define(N,4).
--define(M,3).
+-define(N,5).
+-define(M,10).
 
 workstation()-> [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9].
 
@@ -83,8 +83,8 @@ onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T) ->
 
 
                                                            not(Initiator)       -> onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T);
-                                                           Terminit       -> onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T)
-                                                                
+                                                         Initiator and  Terminit       ->J= (I+1) rem ?M,sendRec(J,Nbrecdi),   onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T)
+                                                              
                                               end;
                                                       
                                                    
@@ -136,7 +136,7 @@ onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T) ->
                                                                  
                                                                                      sendRec(J,Nbrecdi+K),
                                                                                      onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T);
-                                                                not(Initiator) and (length(S)/=0) -> onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T);
+                                                                not(Initiator) and (length(S)/=0) ->  onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T);
                                                                 Initiator and (Terminit ) -> Totalrecd = K,sendSnd(J,Nbsenti,Totalrecd),onReceive(I,Initiator,Terminit,Terminatedi,Nbrecdi,Nbsenti,S,T)
                                                
                                                           end;
