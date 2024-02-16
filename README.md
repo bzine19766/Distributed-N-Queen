@@ -353,12 +353,17 @@ when we delete the io:format statements the program is stuck we will fix it soon
 ![8-queentest](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/51b90f1a-7799-42b9-977a-845ffb9deae5)
 
 
+# Concurrent Distributor
+
+After removing the io:format command from the distributor, fixing errors, and incorporating time measurement for 4 machines (M=4), the running times for the quad-core of my laptop halved compared to the sequential program. For instance, in the 8-queens scenario, the sequential program took 7.7 seconds, whereas the concurrent distributor completed it in approximately 3.4 seconds.
+
 # Kneser Representation
 
 
 From definition 1 in the paper we can conclude that a Kneser representation for a graph is the solution to a 2-SAT problem, where there is a solution only if m >= n. m represents the number of bits used to encode a vertex in the graph and n represents the number of vertices in the graph. we note that an encoding of vertex v represents its relationship with all other vertices in the graph.
 We have that vi is adjacent to vj if and only if encoding(vi)&encoding(vj)=0 where & is the bitwise and operation.
 
+![cdistributor](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/23046e52-32d6-4083-b7e7-09fd9e7a0f31)
 
 For the sake of simplicity, we will do this exercise. See if you can find the Kneser representation for the graph below.
 
