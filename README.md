@@ -364,6 +364,7 @@ for different N-queens we have :
 ![cdistributorstat](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/dad7d12e-65dc-42f1-b72f-da74a8c77ed3)
 
 
+Now, we will transition to the distributed version on the network. We must modify the cdistributor by replacing the workstation addresses with node addresses in the network. We will return shortly.
 
 
 # Kneser Representation
