@@ -359,6 +359,11 @@ After removing the io:format command from the distributor, fixing errors, and in
 
 ![cdistributor](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/bebd60b9-b353-4b80-a318-af078485ad1f)
 
+for different N-queens we have :
+
+![cdistributorstat](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/dad7d12e-65dc-42f1-b72f-da74a8c77ed3)
+
+
 
 
 # Kneser Representation
