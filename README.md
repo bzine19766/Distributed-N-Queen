@@ -367,6 +367,14 @@ for different N-queens we have :
 Now, we will transition to the distributed version on the network. We must modify the cdistributor by replacing the workstation addresses with node addresses in the network. We will return shortly.
 
 
+# Distributed Distributor 
+After adding the network node addresses to the distributor, making adjustments, and fixing bugs, we tested the distributor with different numbers of machines, each set up to run one process per machine. Our results show that as the number of machines increases, the processing time decreases. For example, solving the 9 queens problem on a single machine takes 76 seconds. However, with two machines, the time reduces to 48 seconds, which is greater than the parallel version that takes 33 seconds due to network overhead.
+
+
+
+![ddistributor9queen2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/2d3ca426-ec4f-452f-a10c-8e308313c1f5)
+
+
 # Kneser Representation
 
 
