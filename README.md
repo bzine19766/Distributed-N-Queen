@@ -390,7 +390,7 @@ For 10 queens, the sequential program takes about 14 minutes, while the distribu
 
 
 
-
+Now we just need to compile the statistics from 10 machines, we will be back shortly.
 
 
 # Kneser Representation
