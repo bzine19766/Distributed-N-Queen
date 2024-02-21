@@ -375,6 +375,18 @@ After adding the network node addresses to the distributor, making adjustments, 
 ![ddistributor9queen2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/2d3ca426-ec4f-452f-a10c-8e308313c1f5)
 
 
+For 10 queens, the sequential program takes about 14 minutes, while the distributed version running on two machines takes around 8 minutes.
+![10queenseqalgo](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/c532adb3-c029-4231-9400-a95bc014b832)
+
+
+
+![10queens2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/d43a5eb5-d389-4a3f-9928-74c6c094ca79)
+
+
+
+
+
+
 # Kneser Representation
 
 
