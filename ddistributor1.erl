@@ -4,18 +4,17 @@
 -import(codinglist,[coding_list/1]).
 -import(library,[split/2,is_Terminal/2,getInitialConf/1,displayOfConf/2,countSetBits/1,second/2]).
 -import(testhash,[h/3,allConfiguration/3,maph/3,numOfConfByMachines/3]).
--define(N,9).
--define(M,2).
+-define(N,8).
+-define(M,6).
 -define(Nd,3).
 
-workstation()-> [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9].
-nnode() -> [node0@acer,node1@acer,node2@bzine19,node3@bzine19].
+workstation()-> [w0,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11].
+nnode() -> [node0@acer,node1@bzine19,node2@cnc].
 nodeName(I)-> if 
-                 I< 1 ->indice(0 , nnode());
-                 (I < 2)and (I>0) ->  indice(2 , nnode());
+                 I< 2 ->indice(0 , nnode());
+                 (I < 4)and (I>1) ->  indice(1 , nnode());
                  (I < 6)and (I>3) ->  indice(2 , nnode());
-                 (I < 4)and (I>2) ->  indice(3 , nnode())
-                 %%I < 10 ->  indice(2 , nnode())
+                 I < 14 ->  indice(2 , nnode())
               end.
 
 indice(0, [H|_]) ->
