@@ -389,6 +389,11 @@ For 10 queens, the sequential program takes about 14 minutes, while the distribu
 ![10queens2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/d43a5eb5-d389-4a3f-9928-74c6c094ca79)
 
 
+10  queens on 3 machines one process by machine i.e. not harnessing quad-core 
+
+![10queen3machine2](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/6664c17d-e4ee-4911-87cc-d951dfcf6a50)
+
+
 
 
 10 queens on 3 machines harnessing quad-core :
