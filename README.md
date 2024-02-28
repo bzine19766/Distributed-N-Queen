@@ -384,12 +384,12 @@ For 10 queens, the sequential program takes about 14 minutes, while the distribu
 
 
 
-10 queens on 2 machines first execution gives 7.8 minutes 
+10 queens on 2 machines first execution one process by machine  gives 7.8 minutes 
 
 ![10queens2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/d43a5eb5-d389-4a3f-9928-74c6c094ca79)
 
 
-10 queens on 2 machines second execution gives 6.5 minutes 
+10 queens on 2 machines second execution one process by machine gives 6.5 minutes 
 
 ![10queen2machine](https://github.com/bzine19766/Distributed-N-Queen/assets/122158226/7f957e8a-7f71-4722-8b50-7bcb4952ddc9)
 
